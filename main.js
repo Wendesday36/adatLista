@@ -1,18 +1,30 @@
 import { ADATLISTA } from "./adat.js";
+import { rendezes } from "./rendezesek.js";
+let rendezesiSzempontKulcs = "nev";
+  let rendezesiIrany = true;
 $(function () {
-  const articleElem = $("article");
-  articleElem.append(osszeAllit(ADATLISTA));
-  articleElem.append(rendezes(ADATLISTA));
+  
+  init();
   // jQuery methods go here...
 });
-console.log(osszeAllit(ADATLISTA));
+function init() {
+  const articleElem = $("article");
+  articleElem.html(osszeAllit(ADATLISTA));
+  const FEJLEC = $("th");
+  
+
+  FEJLEC.on("click", function () { 
+    rendezes(ADATLISTA, rendezesiSzempontKulcs);
+    init();
+  });
+}
 function osszeAllit(lista) {
   let txt = "";
 
   txt += `<table class="table table-stripped ">`;
-  const FEJLEC = (txt += `<tr class="table-dark"><th>név</th>
-    <th>kor</th>
-    <th>fajta</th></tr>`);
+  txt += `<tr class="table-dark"><th id = "nev">név</th>
+    <th id = "kor">kor</th>
+    <th id = "fajta">fajta</th></tr>`;
   for (let index = 0; index < lista.length; index++) {
     txt += `<tr>`;
     for (const key in lista[index]) {
@@ -24,39 +36,3 @@ function osszeAllit(lista) {
   console.log(txt);
   return txt;
 }
-/* function rendezesNevSzerint(lista, kulcs) {
-  lista.sort(function (a, b) {
-    let ertek = 1;
-    if (a[kulcs] < b[kulcs]) {
-      ertek = -1;
-    }
-    return ertek;
-  });
-} */
-
-/* function rendezesKorSzerint(lista) {
-  lista.sort(function (a, b) {
-    return a.kor - b.kor;
-  });
-} */
-let rendezesiSzempontKulcs = "nev";
-let rendezesiIrany = true;
-const RENDEZESIIRANYOK = {
-  nev: 1,
-  kor: 1,
-  fajta: 1,
-};
-FEJLEC.on("click",rendezes())
-function rendezes(nev,rendezesiIrany){
-  
-}
-/* export function rendezes(lista, kulcs) {
-  
-  
-  if (typeof lista[0][kulcs] === "number") {
-    rendezesKorSzerint(lista);
-  } else {
-    rendezesNevSzerint(lista, kulcs);
-  }
-}
- */
