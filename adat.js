@@ -1,9 +1,9 @@
 export const ADATLISTA = [
-    { nev: "dézi", fajta: "keverék" },
-    { nev: "Loki", fajta: "tacskó", kor: 1 },
-    { nev: "Dézi", fajta: "keverék", kor: 7 },
-    { nev: "Bodri", fajta: "mudi", kor: 3 },
-    { nev: "Zuri", fajta: "foxi", kor: 10 },
-    { nev: "Happy", fajta: "németjuhász", kor: 4 },
+    { nev: "dézi", kor: 4 , fajta: "keverék" },
+    { nev: "Loki",  kor: 1,fajta: "tacskó", },
+    { nev: "Dézi",  kor: 7,fajta: "keverék" },
+    { nev: "Bodri", kor: 3, fajta: "mudi", },
+    { nev: "Zuri", kor: 10,fajta: "foxi",  },
+    { nev: "Happy", kor: 4 , fajta: "németjuhász",},
   ];
   
