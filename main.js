@@ -13,7 +13,7 @@ function init() {
   const FEJLEC = $("th");
   
 
-  FEJLEC.on("click", function () { 
+  FEJLEC.on("click", function () {  rendezesiSzempontKulcs.getElementById()
     rendezes(ADATLISTA, rendezesiSzempontKulcs);
     init();
   });
@@ -22,9 +22,9 @@ function osszeAllit(lista) {
   let txt = "";
 
   txt += `<table class="table table-stripped ">`;
-  txt += `<tr class="table-dark"><th id = "nev">név</th>
-    <th id = "kor">kor</th>
-    <th id = "fajta">fajta</th></tr>`;
+  txt += `<tr class="table-dark"><th id ="nev">név</th>
+    <th id ="kor">kor</th>
+    <th id ="fajta">fajta</th></tr>`;
   for (let index = 0; index < lista.length; index++) {
     txt += `<tr>`;
     for (const key in lista[index]) {
