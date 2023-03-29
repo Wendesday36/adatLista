@@ -9,6 +9,9 @@ ul li{
     display: inline-block;
     
 }
+ul{
+    padding: 0;
+}
 ul li a{
     text-decoration: none;
     padding: 10px;
@@ -19,4 +22,12 @@ section{
     margin: auto;
     padding: 10px;
 
+}
+ul li a:visited{
+    color: black;
+    font-weight: bold;
+}
+ul li a:hover{
+    color: black;
+    font-weight: bold;
 }
