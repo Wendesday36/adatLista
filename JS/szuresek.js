@@ -1,4 +1,5 @@
 import { ADATLISTA } from "./adat.js";
+
 function szures(lista, kulcs, szuresiFeltetel) {
     const SZURTLISTA = lista.flter(function (a) {
       return a[kulcs].includes(szuresiFeltetel);
@@ -9,6 +10,6 @@ function szures(lista, kulcs, szuresiFeltetel) {
   const FAJTAINPUTELEM = $("fajta");
   NEVINPUTELEM.on("keyup", function () {
     let nevErtek = NEVINPUTELEM.val();
-    let szurtList = szuresFajtaSzerint(ADATLISTA, "nev", nevErtek);
+    let szurtList = szures(ADATLISTA, "nev", nevErtek);
     console.log(szurtList);
   });
