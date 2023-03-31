@@ -31,7 +31,15 @@ ul li a:hover{
     color: black;
     font-weight: bold;
 }
+table{
+    margin: 10px;
+}
+.container{
+    margin: auto;
+}
 .card{
-    margin: 0;
-    padding: 0;;
+    margin: 10px;
+}
+footer{
+    text-align: center;
 }
