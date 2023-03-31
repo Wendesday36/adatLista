@@ -1,6 +1,6 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
-/* import { szures } from "./szuresek.js"; */
+ import { szures } from "./szuresek.js"; 
 let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = true;
 $(function () {
@@ -17,6 +17,7 @@ function init() {
     rendezes(ADATLISTA, rendezesiSzempontKulcs);
     init();
   });
+  
 }
 function osszeAllit(lista) {
   let txt = "";

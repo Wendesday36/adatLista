@@ -1,6 +1,4 @@
 
-
-
 export function rendezes(lista, kulcs) {
   if (typeof lista[0][kulcs] === "number") {
     rendezesKorSzerint(lista);
