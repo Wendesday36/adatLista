@@ -1,9 +1,8 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
 let rendezesiSzempontKulcs = "nev";
-  let rendezesiIrany = true;
+let rendezesiIrany = true;
 $(function () {
-  
   init();
   // jQuery methods go here...
 });
@@ -11,9 +10,10 @@ function init() {
   const articleElem = $("article");
   articleElem.html(osszeAllit(ADATLISTA));
   const FEJLEC = $("th");
-  
 
-  FEJLEC.on("click", function () {  rendezesiSzempontKulcs.getElementById()
+  FEJLEC.on("click", function () {
+    console.log(event.target.id) 
+    rendezesiSzempontKulcs=event.target.id
     rendezes(ADATLISTA, rendezesiSzempontKulcs);
     init();
   });
@@ -33,6 +33,6 @@ function osszeAllit(lista) {
     `</tr>`;
   }
   txt += `</table>`;
-  console.log(txt);
+ 
   return txt;
 }
