@@ -11,7 +11,6 @@ function init() {
   const articleElem = $("article");
   articleElem.html(osszeAllit(ADATLISTA));
   const FEJLEC = $("th");
-  szures(ADATLISTA);
   FEJLEC.on("click", function () {
     console.log(event.target.id);
     rendezesiSzempontKulcs = event.target.id;
