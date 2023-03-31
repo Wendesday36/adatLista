@@ -1,23 +1,23 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
- import { szures } from "./szuresek.js"; 
+/* import { szures } from "./szuresek.js";  */
 let rendezesiSzempontKulcs = "nev";
-let rendezesiIrany = true;
+let rendezesiIrany = -1;
 $(function () {
   init();
- 
 });
 function init() {
   const articleElem = $("article");
   articleElem.html(osszeAllit(ADATLISTA));
   const FEJLEC = $("th");
   FEJLEC.on("click", function () {
-    console.log(event.target.id);
+  
     rendezesiSzempontKulcs = event.target.id;
-    rendezes(ADATLISTA, rendezesiSzempontKulcs);
+    rendezes(ADATLISTA, rendezesiSzempontKulcs, rendezesiIrany);
+    rendezesiIrany *= -1
     init();
   });
-  
+  torles(ADATLISTA);
 }
 function osszeAllit(lista) {
   let txt = "";
@@ -36,4 +36,14 @@ function osszeAllit(lista) {
   txt += `</table>`;
 
   return txt;
+}
+function torles(lista) {
+  for (let index = 0; index < lista.length; index++) {
+    const TOROL = $(`#t${index}`);
+    TOROL.on("click", function () {
+      let torolt = event.target.id;
+      $(torolt).remove();
+      console.log(torolt);
+    });
+  }
 }
