@@ -5,19 +5,44 @@ let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
+
+  const NEVINPUTELEM = $("#knev");
+  const KORINPUTELEM = $("#kkor");
+  const FAJTAINPUTELEM = $("#kfajta");
+  NEVINPUTELEM.on("keyup", function () {
+    let nevErtek = NEVINPUTELEM.val();
+    let szurtList = szures(ADATLISTA, "nev", nevErtek);
+    console.log(szurtList);
+  });
+  KORINPUTELEM.on("keyup", function () {
+    let korErtek = KORINPUTELEM.val();
+    let szurtList = szures(ADATLISTA, "kor", korErtek);
+    console.log(szurtList);
+  });
+  FAJTAINPUTELEM.on("keyup", function () {
+    let fajtaErtek = FAJTAINPUTELEM.val();
+    let szurtList = szures(ADATLISTA, "fajta", fajtaErtek);
+    console.log(szurtList);
+  });
 });
 function init() {
   const articleElem = $("article");
   articleElem.html(osszeAllit(ADATLISTA));
   const FEJLEC = $("th");
   FEJLEC.on("click", function () {
-  
     rendezesiSzempontKulcs = event.target.id;
     rendezes(ADATLISTA, rendezesiSzempontKulcs, rendezesiIrany);
-    rendezesiIrany *= -1
+    rendezesiIrany *= -1;
     init();
   });
-  torles(ADATLISTA);
+  const TOROL = $(".torolgomb");
+  TOROL.on("click", function () {
+    let torolt = event.target.id;
+    //kitroroljuk a listabol
+    ADATLISTA.splice(ADATLISTA[torolt]);
+    //ujraepitjuk az o9ldalbol
+    init();
+  });
 }
 function osszeAllit(lista) {
   let txt = "";
@@ -31,21 +56,11 @@ function osszeAllit(lista) {
     txt += `<tr>`;
     for (const key in lista[index]) {
       txt += `<td>${lista[index][key]} </td>`;
-      
     }
-    txt += `<td><button id="t${index}" type="button">𝑥</button> </td>`;
+    txt += `<td><button id="t${index}" class="torolgomb" type="button">𝑥</button> </td>`;
     `</tr>`;
   }
   txt += `</table>`;
 
   return txt;
-}
-function torles(lista) {
-  for (let index = 0; index < lista.length; index++) {
-    const TOROL = $(`#t${index}`);
-    TOROL.on("click", function () {
-      let torolt = event.target.id;
-      $(torolt).remove();
-    });
-  }
 }
