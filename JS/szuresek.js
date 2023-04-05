@@ -1,6 +1,14 @@
 export function szures(lista, kulcs, szuresiFeltetel) {
-  const SZURTLISTA = lista.filter(function (a) {
+  const SZURTLISTAK = lista.filter(function (a) {
     return a[kulcs].includes(szuresiFeltetel);
   });
-  return SZURTLISTA;
+  return SZURTLISTAK;
+}
+export function szuresKorSzerint(lista, kulcs, szuresiFeltetel) {
+  let szurtLista = lista.filter(function (kulcs) {
+    console.log(kulcs + szuresiFeltetel);
+    return eval(kulcs + szuresiFeltetel);
+  });
+  console.log(szurtLista);
+  return szurtLista;
 }

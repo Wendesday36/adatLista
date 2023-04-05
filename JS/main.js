@@ -1,6 +1,6 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
-import { szures } from "./szuresek.js";
+import { szures,szuresKorSzerint } from "./szuresek.js";
 let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
@@ -9,18 +9,18 @@ $(function () {
   const NEVINPUTELEM = $("#knev");
   const KORINPUTELEM = $("#kkor");
   const FAJTAINPUTELEM = $("#kfajta");
-  NEVINPUTELEM.on("keyup", function () {
-    let nevErtek = NEVINPUTELEM.val();
+  NEVINPUTELEM.on("click", function () {
+    let nevErtek = NEVINPUTELEM.val().toLowerCase();
     let szurtList = szures(ADATLISTA, "nev", nevErtek);
     console.log(szurtList);
   });
-  KORINPUTELEM.on("keyup", function () {
+  KORINPUTELEM.on("click", function () {
     let korErtek = KORINPUTELEM.val();
     let szurtList = szures(ADATLISTA, "kor", korErtek);
     console.log(szurtList);
   });
-  FAJTAINPUTELEM.on("keyup", function () {
-    let fajtaErtek = FAJTAINPUTELEM.val();
+  FAJTAINPUTELEM.on("click", function () {
+    let fajtaErtek = FAJTAINPUTELEM.val().toLowerCases();
     let szurtList = szures(ADATLISTA, "fajta", fajtaErtek);
     console.log(szurtList);
   });
