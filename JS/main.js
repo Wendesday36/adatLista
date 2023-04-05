@@ -1,6 +1,6 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
-/* import { szures } from "./szuresek.js";  */
+import { szures } from "./szuresek.js";
 let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
@@ -25,12 +25,15 @@ function osszeAllit(lista) {
   txt += `<table class="table table-stripped ">`;
   txt += `<tr class="table-dark"><th id ="nev">név</th>
     <th id ="kor">kor</th>
-    <th id ="fajta">fajta</th></tr>`;
+    <th id ="fajta">fajta</th>
+    <th>törlés</th></tr>`;
   for (let index = 0; index < lista.length; index++) {
     txt += `<tr>`;
     for (const key in lista[index]) {
-      txt += `<td>${lista[index][key]}</td>`;
+      txt += `<td>${lista[index][key]} </td>`;
+      
     }
+    txt += `<td><button id="t${index}" type="button">𝑥</button> </td>`;
     `</tr>`;
   }
   txt += `</table>`;
@@ -43,7 +46,6 @@ function torles(lista) {
     TOROL.on("click", function () {
       let torolt = event.target.id;
       $(torolt).remove();
-      console.log(torolt);
     });
   }
 }
