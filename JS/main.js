@@ -39,7 +39,7 @@ function init() {
   TOROL.on("click", function () {
     let torolt = event.target.id;
     //kitroroljuk a listabol
-    ADATLISTA.splice(ADATLISTA[torolt]);
+    ADATLISTA.splice(torolt, 1);
     //ujraepitjuk az o9ldalbol
     init();
   });
