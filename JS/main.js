@@ -6,15 +6,10 @@ let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
-  
-  
 
-  
   rendezes(ADATLISTA, "nev");
   rendezes(ADATLISTA, "kor");
   rendezes(ADATLISTA, "fajta");
-  
-
 
   const TABLAZAT = $("#admin");
   const NEVINPUTELEM = $("#knev");
@@ -24,31 +19,29 @@ $(function () {
   let tartalom = osszeAllit(ADATLISTA);
   TABLAZAT.append(tartalom);
 
-
   NEVINPUTELEM.on("input", function () {
     let nevErtek = NEVINPUTELEM.val().toLowerCase();
     let szurtlista = szures(ADATLISTA, "nev", nevErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
     $("table").replaceWith(tartalom);
-});
+  });
 
-KORINPUTELEM.on("input", function () {
+  KORINPUTELEM.on("input", function () {
     let korErtek = KORINPUTELEM.val();
     let szurtlista = szures(ADATLISTA, "kor", korErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
     $("table").replaceWith(tartalom);
-});
+  });
 
-FAJTAINPUTELEM.on("input", function () {
+  FAJTAINPUTELEM.on("input", function () {
     let fajtaErtek = FAJTAINPUTELEM.val().toLowerCase();
     let szurtlista = szures(ADATLISTA, "fajta", fajtaErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
     $("table").replaceWith(tartalom);
-});
-
+  });
 });
 function init() {
   const articleElem = $("article");
@@ -68,8 +61,7 @@ function init() {
     //ujraepitjuk az o9ldalbol
     init();
   });
-  articleElem.html(felvitel(ADATLISTA))
-
+  articleElem.html(felvitel(ADATLISTA));
 }
 function osszeAllit(lista) {
   let txt = "";

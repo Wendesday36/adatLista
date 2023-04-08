@@ -1,4 +1,3 @@
-
 export function rendezes(lista, kulcs, rendezesiIrany) {
   lista.sort(function (a, b) {
     let ertek = 1;

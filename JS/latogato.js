@@ -17,13 +17,10 @@ function osszeAllit(lista) {
     txt += `<h4 class="card-title">${lista[index].nev}</h4>`;
     txt += `<p class="card-text">${lista[index].kor}</p>`;
     txt += `<p class="card-text">${lista[index].fajta}</p>`;
-    txt += `<input type="submit" id="nez" class=" btn btn-sucess	" value="Nézd meg">`
+    txt += `<input type="submit" id="nez" class=" btn btn-sucess	" value="Nézd meg">`;
     txt += `</div>
       </div>`;
-    
   }
   txt += `</div>`;
   return txt;
-
 }
-

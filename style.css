@@ -1,66 +1,64 @@
-main{
-    margin: auto;
-    padding: 0;
-    max-width: 1200px;
-    background-color: antiquewhite;
-    max-height: 1500px;
+main {
+  margin: auto;
+  padding: 0;
+  max-width: 1200px;
+  background-color: antiquewhite;
+  max-height: 1500px;
 }
-header h1{
-    margin: 10px;
+header h1 {
+  margin: 10px;
 }
-ul li{
-    list-style: none;
-    text-decoration: none;
-    display: inline-block;
-    
+ul li {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
 }
-ul{
-    padding: 0;
+ul {
+  padding: 0;
 }
-ul li a{
-    text-decoration: none;
-    padding: 10px;
-    font-size: large;
-    color: black;
-}
-section{
-    margin: auto;
-    padding: 10px;
-
-}
-ul li a:visited{
-    color: black;
-    font-weight: bold;
-}
-ul li a:hover{
-    color: black;
-    font-weight: bold;
-}
-table{
-    max-width: 1000px;
-    margin: auto;
-    background-color: rgb(253, 252, 248);
-}
-.container{
-    max-width: 750px;
-    margin: auto;
-}
-.card{
-    margin: 10px;
-}
-footer{
-    text-align: center;
-}
-aside{
-    margin: 10px;
-}
-aside input{
-    margin: 5px;
+ul li a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: large;
+  color: black;
 }
 section {
-    padding: 10px;
+  margin: auto;
+  padding: 10px;
 }
-.torolgomb{
-    border: 0;
-    background: none;
+ul li a:visited {
+  color: black;
+  font-weight: bold;
+}
+ul li a:hover {
+  color: black;
+  font-weight: bold;
+}
+table {
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgb(253, 252, 248);
+}
+.container {
+  max-width: 750px;
+  margin: auto;
+}
+.card {
+  margin: 10px;
+}
+footer {
+  text-align: center;
+}
+aside {
+  margin: 10px;
+}
+aside input {
+  margin: 5px;
+}
+section {
+  padding: 10px;
+}
+.torolgomb {
+  border: 0;
+  background: none;
 }
