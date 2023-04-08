@@ -43,3 +43,9 @@ table{
 footer{
     text-align: center;
 }
+aside{
+    margin: 10px;
+}
+aside input{
+    margin: 5px;
+}

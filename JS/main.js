@@ -1,10 +1,13 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
 import { szures } from "./szuresek.js";
+import { felvitel } from "./adatfelvitel.js";
 let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
+  felvitel(ADATLISTA)
+  
 
   rendezes(ADATLISTA, "kor");
   rendezes(ADATLISTA, "nev");
@@ -45,6 +48,7 @@ FAJTAINPUTELEM.on("input", function () {
     let tartalom = osszeAllit(szurtlista);
     $("table").replaceWith(tartalom);
 });
+
 });
 function init() {
   const articleElem = $("article");
@@ -78,7 +82,7 @@ function osszeAllit(lista) {
     for (const key in lista[index]) {
       txt += `<td>${lista[index][key]} </td>`;
     }
-    txt += `<td><button id="t${index}" class="torolgomb" type="button">𝑥</button> </td>`;
+    txt += `<td><button id="t${index}" class="torolgomb" type="button">ჯ</button> </td>`;
     `</tr>`;
   }
   txt += `</table>`;

@@ -19,17 +19,8 @@ function osszeAllit(lista) {
     txt += `<p class="card-text">${lista[index].fajta}</p>`;
     txt += `</div>
       </div>`;
+    
   }
   txt += `</div>`;
   return txt;
 }
-
-/*  <h2>Card Image</h2>
-          <p>Image at the top (card-img-top):</p>
-          <div class="card" style="width:400px">
-            <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-            
-              John Doe
-              Some example text some example text. John Doe is an architect and engineer
-             
-          <br></br> */
