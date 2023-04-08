@@ -6,15 +6,14 @@ let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
-  felvitel(ADATLISTA)
+  
   
 
   rendezes(ADATLISTA, "kor");
   rendezes(ADATLISTA, "nev");
   rendezes(ADATLISTA, "fajta");
   
-  console.log(ADATLISTA);
-  console.log(szures(ADATLISTA, "fajta", "keverék"));
+
 
   const TABLAZAT = $("#admin");
   const NEVINPUTELEM = $("#knev");
@@ -68,6 +67,8 @@ function init() {
     //ujraepitjuk az o9ldalbol
     init();
   });
+  articleElem.html(felvitel(ADATLISTA))
+
 }
 function osszeAllit(lista) {
   let txt = "";
