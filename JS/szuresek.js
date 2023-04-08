@@ -4,11 +4,3 @@ export function szures(lista, kulcs, szuresiFeltetel) {
   });
   return SZURTLISTAK;
 }
-export function szuresKorSzerint(lista, kulcs, szuresiFeltetel) {
-  let szurtLista = lista.filter(function (kulcs) {
-    console.log(kulcs + szuresiFeltetel);
-    return eval(kulcs + szuresiFeltetel);
-  });
-  console.log(szurtLista);
-  return szurtLista;
-}

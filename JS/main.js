@@ -1,29 +1,50 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
-import { szures,szuresKorSzerint } from "./szuresek.js";
+import { szures } from "./szuresek.js";
 let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
 
+  rendezes(ADATLISTA, "kor");
+  rendezes(ADATLISTA, "nev");
+  rendezes(ADATLISTA, "fajta");
+  
+  console.log(ADATLISTA);
+  console.log(szures(ADATLISTA, "fajta", "keverék"));
+
+  const TABLAZAT = $("#admin");
   const NEVINPUTELEM = $("#knev");
   const KORINPUTELEM = $("#kkor");
   const FAJTAINPUTELEM = $("#kfajta");
-  NEVINPUTELEM.on("click", function () {
+
+  let tartalom = osszeAllit(ADATLISTA);
+  TABLAZAT.append(tartalom);
+
+
+  NEVINPUTELEM.on("input", function () {
     let nevErtek = NEVINPUTELEM.val().toLowerCase();
-    let szurtList = szures(ADATLISTA, "nev", nevErtek);
-    console.log(szurtList);
-  });
-  KORINPUTELEM.on("click", function () {
+    let szurtlista = szures(ADATLISTA, "nev", nevErtek);
+    console.log(szurtlista);
+    let tartalom = osszeAllit(szurtlista);
+    $("table").replaceWith(tartalom);
+});
+
+KORINPUTELEM.on("input", function () {
     let korErtek = KORINPUTELEM.val();
-    let szurtList = szures(ADATLISTA, "kor", korErtek);
-    console.log(szurtList);
-  });
-  FAJTAINPUTELEM.on("click", function () {
-    let fajtaErtek = FAJTAINPUTELEM.val().toLowerCases();
-    let szurtList = szures(ADATLISTA, "fajta", fajtaErtek);
-    console.log(szurtList);
-  });
+    let szurtlista = szures(ADATLISTA, "kor", korErtek);
+    console.log(szurtlista);
+    let tartalom = osszeAllit(szurtlista);
+    $("table").replaceWith(tartalom);
+});
+
+FAJTAINPUTELEM.on("input", function () {
+    let fajtaErtek = FAJTAINPUTELEM.val().toLowerCase();
+    let szurtlista = szures(ADATLISTA, "fajta", fajtaErtek);
+    console.log(szurtlista);
+    let tartalom = osszeAllit(szurtlista);
+    $("table").replaceWith(tartalom);
+});
 });
 function init() {
   const articleElem = $("article");
