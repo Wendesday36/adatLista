@@ -10,7 +10,7 @@ function init() {
 }
 function osszeAllit(lista) {
   let txt = "";
-  txt += `<div class="container row mt-3">`;
+  txt += `<div class="container row mt-4">`;
   for (let index = 0; index < lista.length; index++) {
     txt += `<div class="card border col-sm-3" > `;
     txt += `<div class="card-body">`;

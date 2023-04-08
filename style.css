@@ -1,7 +1,12 @@
 main{
     margin: auto;
     padding: 0;
-    max-width: 1000px;
+    max-width: 1200px;
+    background-color: antiquewhite;
+    max-height: 1500px;
+}
+header h1{
+    margin: 10px;
 }
 ul li{
     list-style: none;
@@ -32,9 +37,12 @@ ul li a:hover{
     font-weight: bold;
 }
 table{
-    margin: 10px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgb(253, 252, 248);
 }
 .container{
+    max-width: 750px;
     margin: auto;
 }
 .card{
@@ -48,4 +56,7 @@ aside{
 }
 aside input{
     margin: 5px;
+}
+section {
+    padding: 10px;
 }
