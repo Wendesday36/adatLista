@@ -60,3 +60,7 @@ aside input{
 section {
     padding: 10px;
 }
+.torolgomb{
+    border: 0;
+    background: none;
+}

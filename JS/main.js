@@ -9,8 +9,9 @@ $(function () {
   
   
 
-  rendezes(ADATLISTA, "kor");
+  
   rendezes(ADATLISTA, "nev");
+  rendezes(ADATLISTA, "kor");
   rendezes(ADATLISTA, "fajta");
   
 
