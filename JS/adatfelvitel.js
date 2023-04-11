@@ -1,5 +1,11 @@
 export function felvitel() {
-  const NEV = $("#neve");
+  const FELVIT = $(".adatfelv")
+
+  
+
+
+
+  /* const NEV = $("#neve");
   const FAJTA = $("#fajt");
   const KOR = $("#kora");
   const GOMB = $("#kuld");
@@ -9,11 +15,11 @@ export function felvitel() {
     FAJTA.push(lista.fajta);
     KOR.push(lista.kor);
   }); */
-  $(document).ready(function () {
+  /* $(document).ready(function () {
     $("#kuld").click(function () {
       $("#neve").push(lista.név);
       $("#fajt").push(lista.fajta);
       $("#kora").push(lista.kor);
     });
-  });
+  }); */
 }

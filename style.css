@@ -2,7 +2,7 @@ main {
   margin: auto;
   padding: 0;
   max-width: 1200px;
-  background-color: antiquewhite;
+  background-color: rgb(189, 226, 245);
   max-height: 1500px;
 }
 header h1 {

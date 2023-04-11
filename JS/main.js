@@ -7,6 +7,16 @@ let rendezesiIrany = -1;
 $(function () {
   init();
 
+  const FELVIT = $(".adatfelv")
+  FELVIT.on(function(){
+    ADATLISTA.push(FELVIT)
+
+    console.log(FELVIT)
+
+    
+  })
+
+
   rendezes(ADATLISTA, "nev");
   rendezes(ADATLISTA, "kor");
   rendezes(ADATLISTA, "fajta");
@@ -61,7 +71,7 @@ function init() {
     //ujraepitjuk az o9ldalbol
     init();
   });
-  articleElem.html(felvitel(ADATLISTA));
+  
 }
 function osszeAllit(lista) {
   let txt = "";

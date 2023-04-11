@@ -1,7 +1,6 @@
 import { ADATLISTA } from "./adat.js";
 $(function () {
   init();
-  // jQuery methods go here...
 });
 
 function init() {
