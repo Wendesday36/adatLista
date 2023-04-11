@@ -1,4 +1,5 @@
 import { ADATLISTA } from "./adat.js";
+import { osszeAllit } from "./osszeAllit.js";
 import { rendezes } from "./rendezesek.js";
 import { szures } from "./szuresek.js";
 let rendezesiSzempontKulcs = "nev";
@@ -6,13 +7,13 @@ let rendezesiIrany = -1;
 $(function () {
   init();
 
-  const FELVIT = $(".adatfelv");
-  const UJLISTAELEM = { nev: $("#neve"), kor: $("#kora"), fajta: $("#fajt") };
-  FELVIT.on("click", function () {
+  const KULD = document.querySelector("#kuld");
+  KULD.addEventListener("click",  function () {
     ADATLISTA.push(UJLISTAELEM)
-    
+    TABLAZAT = osszeAllit(ADATLISTA)
   });
-  console.log(UJLISTAELEM)
+ /*  const UJLISTAELEM = { nev: $("#neve"), kor: $("#kora"), fajta: $("#fajt") }; */
+ 
   rendezes(ADATLISTA, "nev");
   rendezes(ADATLISTA, "kor");
   rendezes(ADATLISTA, "fajta");
@@ -67,24 +68,23 @@ function init() {
     //ujraepitjuk az o9ldalbol
     init();
   });
+  AdatFelv()
 }
-function osszeAllit(lista) {
-  let txt = "";
 
-  txt += `<table class="table table-stripped ">`;
-  txt += `<tr class="table-dark"><th id ="nev">név</th>
-    <th id ="kor">kor</th>
-    <th id ="fajta">fajta</th>
-    <th>törlés</th></tr>`;
-  for (let index = 0; index < lista.length; index++) {
-    txt += `<tr>`;
-    for (const key in lista[index]) {
-      txt += `<td>${lista[index][key]} </td>`;
-    }
-    txt += `<td><button id="t${index}" class="torolgomb" type="button">ჯ</button> </td>`;
-    `</tr>`;
-  }
-  txt += `</table>`;
+function AdatFelv(){
+  const UJ = {}
+  const NevInputElem = document.querySelector("#neve");
+  UJ.nev = NevInputElem.value;
 
-  return txt;
+  const KorInputElem = document.querySelector("#kora");
+  UJ.kor = KorInputElem.value;
+
+  const FajtaInputElem = document.querySelector("#fajt");
+  UJ.fajta = FajtaInputElem.value;
+
+
+  ADATLISTA.push(UJ)
+  osszeAllit(ADATLISTA)
+
+
 }
