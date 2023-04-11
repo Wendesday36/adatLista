@@ -1,21 +1,18 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
 import { szures } from "./szuresek.js";
- let rendezesiSzempontKulcs = "nev";
+let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
 
-  const FELVIT = $(".adatfelv")
-  FELVIT.on("click",function(){
-    console.log(FELVIT)
-
-    FELVIT.push(osszeAllit(ADATLISTA))
-
+  const FELVIT = $(".adatfelv");
+  const UJLISTAELEM = { nev: $("#neve"), kor: $("#kora"), fajta: $("#fajt") };
+  FELVIT.on("click", function () {
+    ADATLISTA.push(UJLISTAELEM)
     
-  })
-
-
+  });
+  console.log(UJLISTAELEM)
   rendezes(ADATLISTA, "nev");
   rendezes(ADATLISTA, "kor");
   rendezes(ADATLISTA, "fajta");
@@ -70,7 +67,6 @@ function init() {
     //ujraepitjuk az o9ldalbol
     init();
   });
-  
 }
 function osszeAllit(lista) {
   let txt = "";
