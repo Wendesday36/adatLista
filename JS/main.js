@@ -6,14 +6,8 @@ let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
+  AdatFelv();
 
-  const KULD = document.querySelector("#kuld");
-  KULD.addEventListener("click",  function () {
-    ADATLISTA.push(UJLISTAELEM)
-    TABLAZAT = osszeAllit(ADATLISTA)
-  });
- /*  const UJLISTAELEM = { nev: $("#neve"), kor: $("#kora"), fajta: $("#fajt") }; */
- 
   rendezes(ADATLISTA, "nev");
   rendezes(ADATLISTA, "kor");
   rendezes(ADATLISTA, "fajta");
@@ -27,7 +21,7 @@ $(function () {
   TABLAZAT.append(tartalom);
 
   NEVINPUTELEM.on("input", function () {
-    let nevErtek = NEVINPUTELEM.val().toLowerCase();
+    let nevErtek = NEVINPUTELEM.val();
     let szurtlista = szures(ADATLISTA, "nev", nevErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
@@ -43,7 +37,7 @@ $(function () {
   });
 
   FAJTAINPUTELEM.on("input", function () {
-    let fajtaErtek = FAJTAINPUTELEM.val().toLowerCase();
+    let fajtaErtek = FAJTAINPUTELEM.val();
     let szurtlista = szures(ADATLISTA, "fajta", fajtaErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
@@ -68,23 +62,23 @@ function init() {
     //ujraepitjuk az o9ldalbol
     init();
   });
-  AdatFelv()
 }
 
-function AdatFelv(){
-  const UJ = {}
-  const NevInputElem = document.querySelector("#neve");
-  UJ.nev = NevInputElem.value;
+function AdatFelv() {
+  const NEV = $("#neve");
+  const KOR = $("#kora");
+  const FAJTA = $("#fajt");
+  const KULD = $("#kuld");
+  KULD.on("click", function () {
+    const UJ = {
+      nev: NEV.val(),
+      kor: KOR.val(),
+      fajta: FAJTA.val(),
+    };
+    ADATLISTA.push(UJ);
+    let tartalom = osszeAllit(ADATLISTA);
+    TABLAZAT.append(tartalom);
+  });
 
-  const KorInputElem = document.querySelector("#kora");
-  UJ.kor = KorInputElem.value;
-
-  const FajtaInputElem = document.querySelector("#fajt");
-  UJ.fajta = FajtaInputElem.value;
-
-
-  ADATLISTA.push(UJ)
-  osszeAllit(ADATLISTA)
-
-
+  /*  const UJLISTAELEM = { nev: $("#neve"), kor: $("#kora"), fajta: $("#fajt") }; */
 }
