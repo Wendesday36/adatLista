@@ -1,18 +1,16 @@
 import { ADATLISTA } from "./adat.js";
 import { rendezes } from "./rendezesek.js";
 import { szures } from "./szuresek.js";
-import { felvitel } from "./adatfelvitel.js";
-let rendezesiSzempontKulcs = "nev";
+ let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
 
   const FELVIT = $(".adatfelv")
-  const GOMB = $=("#kuld")
-  GOMB.on("click",function(){
+  FELVIT.on("click",function(){
     console.log(FELVIT)
 
-    osszeAllit.push(FELVIT)
+    FELVIT.push(osszeAllit(ADATLISTA))
 
     
   })
