@@ -6,13 +6,13 @@ $(function () {
 function init() {
   const articleElem = $("article");
   articleElem.html(osszeAllit(ADATLISTA));
-  let mostaniIndex = 0;
+  /* let mostaniIndex = 0;
   for (let index = 0; index < ADATLISTA.length; index++) {
     osszeAllit[ADATLISTA[index]].on("click", function () {
       MegTekint(index, KEPEKLISTA);
       mostaniIndex = index;
     });
-  }
+  } */
 }
 function osszeAllit(lista) {
   let txt = "";
