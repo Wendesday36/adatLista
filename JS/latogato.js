@@ -6,6 +6,13 @@ $(function () {
 function init() {
   const articleElem = $("article");
   articleElem.html(osszeAllit(ADATLISTA));
+  let mostaniIndex = 0;
+  for (let index = 0; index < ADATLISTA.length; index++) {
+    osszeAllit[ADATLISTA[index]].on("click", function () {
+      MegTekint(index, KEPEKLISTA);
+      mostaniIndex = index;
+    });
+  }
 }
 function osszeAllit(lista) {
   let txt = "";
@@ -23,3 +30,40 @@ function osszeAllit(lista) {
   txt += `</div>`;
   return txt;
 }
+function MegTekint(index, ADATLISTA) {
+  console.log(event.target); /**ez az elem valtotta ki az esemenyt */
+  const MEGNYIT = document.querySelectorAll("article div");
+  console.log(MEGNYIT);
+  MEGNYIT[0] = ADATLISTA[index];
+}
+/* let mostaniIndex = 0;
+  const balgomb = document.querySelector(".bal");
+  balgomb.addEventListener("click",function () {
+    mostaniIndex--;
+    if (mostaniIndex < 0) {
+      mostaniIndex = ADATLISTA.length-1;
+    }
+    MegTekint(mostaniIndex, osszeAllit);
+  });
+  const jobbgomb= document.querySelector(".jobb");
+  jobbgomb.addEventListener("click",function () {
+    mostaniIndex++;
+    if (mostaniIndex>= ADATLISTA.length) {
+      mostaniIndex = 0;
+    }
+    MegTekint(mostaniIndex, osszeAllit);
+  }); */
+
+/* 
+  for (let index = 0; index < KEPEKLISTA.length; index++) {
+    articleElem[0].innerHTML += `<div><img src="${KEPEKLISTA[index]}" alt ="#"></div>`;
+  }
+  console.log(articleElem);
+  /**articleElem.click;*/
+/*  const KISKEPEK = document.querySelectorAll("article div img");
+  for (let index = 0; index < KISKEPEK.length; index++) {
+    KISKEPEK[index].addEventListener("click", function () {
+      kepMegnyit(index, KEPEKLISTA);
+      mostaniIndex = index;
+    });
+  } */

@@ -8,10 +8,11 @@ $(function () {
   init();
 
   const FELVIT = $(".adatfelv")
-  FELVIT.on(function(){
-    ADATLISTA.push(FELVIT)
-
+  const GOMB = $=("#kuld")
+  GOMB.on("click",function(){
     console.log(FELVIT)
+
+    osszeAllit.push(FELVIT)
 
     
   })
