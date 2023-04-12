@@ -7,11 +7,18 @@ $(function () {
 function init() {
   const articleElem = $("article");
   articleElem.html(osszeAllitDivbe(ADATLISTA));
+  MegTekint()
 }
 
-function MegTekint(index, ADATLISTA) {
-  console.log(event.target); /**ez az elem valtotta ki az esemenyt */
-  const MEGNYIT = document.querySelectorAll("article div");
-  console.log(MEGNYIT);
-  MEGNYIT[0] = ADATLISTA[index];
+function MegTekint() {
+  const NEZGOMB = $(".nez")
+  const TARTALOM = $(".tartalom-card")
+  NEZGOMB.on("click",function(){
+    const NEZ = $(event.target).attr("id")
+    
+    console.log(NEZ)
+  })
+ 
+
+  
 }
