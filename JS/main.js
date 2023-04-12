@@ -7,10 +7,10 @@ let rendezesiIrany = -1;
 $(function () {
   init();
   AdatFelv();
-
+  /* 
   rendezes(ADATLISTA, "nev");
   rendezes(ADATLISTA, "kor");
-  rendezes(ADATLISTA, "fajta");
+  rendezes(ADATLISTA, "fajta"); */
 
   const TABLAZAT = $("#admin");
   const NEVINPUTELEM = $("#knev");
