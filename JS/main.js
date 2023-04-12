@@ -65,19 +65,20 @@ function init() {
 }
 
 function AdatFelv() {
+ 
   const NEV = $("#neve");
   const KOR = $("#kora");
   const FAJTA = $("#fajt");
   const KULD = $("#kuld");
-  KULD.on("click", function () {
+  KULD.on("click", function (event) {
+    event.preventDefault()
     const UJ = {
       nev: NEV.val(),
       kor: KOR.val(),
       fajta: FAJTA.val(),
     };
     ADATLISTA.push(UJ);
-    let tartalom = osszeAllit(ADATLISTA);
-    TABLAZAT.append(tartalom);
+    init()
   });
 
   /*  const UJLISTAELEM = { nev: $("#neve"), kor: $("#kora"), fajta: $("#fajt") }; */
