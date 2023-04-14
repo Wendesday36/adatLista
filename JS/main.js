@@ -1,17 +1,13 @@
 import { ADATLISTA } from "./adat.js";
 import { osszeAllit } from "./osszeAllit.js";
 import { rendezes } from "./rendezesek.js";
-import { szures } from "./szuresek.js";
+import { szures,szuresKorra } from "./szuresek.js";
 let rendezesiSzempontKulcs = "nev";
 let rendezesiIrany = -1;
 $(function () {
   init();
   AdatFelv();
-  /* 
-  rendezes(ADATLISTA, "nev");
-  rendezes(ADATLISTA, "kor");
-  rendezes(ADATLISTA, "fajta"); */
-
+ 
   const TABLAZAT = $("#admin");
   const NEVINPUTELEM = $("#knev");
   const KORINPUTELEM = $("#kkor");
@@ -28,9 +24,9 @@ $(function () {
     $("table").replaceWith(tartalom);
   });
 
-  KORINPUTELEM.on("input", function () {
+  KORINPUTELEM.on("change", function () {
     let korErtek = KORINPUTELEM.val();
-    let szurtlista = szures(ADATLISTA, "kor", korErtek);
+    let szurtlista = szuresKorra(ADATLISTA, "kor", korErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
     $("table").replaceWith(tartalom);

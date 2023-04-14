@@ -5,6 +5,7 @@ export function osszeAllit(lista) {
   txt += `<tr class="table-dark"><th id ="nev">név ⇅</th>
       <th id ="kor">kor ⇅</th>
       <th id ="fajta">fajta ⇅</th>
+      <th>képek ⇅</th>
       <th>törlés</th></tr>`;
   for (let index = 0; index < lista.length; index++) {
     txt += `<tr>`;
@@ -21,7 +22,7 @@ export function osszeAllit(lista) {
 
 export function osszeAllitDivbe(lista) {
   let txt = "";
-  txt += `<div class="container row mt-4">`;
+  txt += `<div class="container row ">`;
   for (let index = 0; index < lista.length; index++) {
     txt += `<div class="card border col-sm-3" > `;
     txt += `<div class="card-body">`;
