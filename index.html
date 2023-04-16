@@ -17,7 +17,9 @@
   <body>
     <main>
       <header>
-        <h1>Adatok Listázása<img id="tea" src="kepek/bubble-tea.png" alt="tea" /></h1>
+        <h1>
+          Adatok Listázása<img id="tea" src="kepek/bubble-tea.png" alt="tea" />
+        </h1>
       </header>
       <nav>
         <ul>
@@ -25,13 +27,16 @@
           <li><a href="admin.html">Admin</a></li>
         </ul>
       </nav>
-      <section >
-        <div ></div>
-        
-        <div class="megjelenito container mt-3">
-          
-          <div class="tartalom-card"></div>
-         
+      <section class="container">
+        <div class="megjelenito row">
+          <div class="bezar col-sm-1"><input type="button" value="X" /></div>
+          <div class="tartalom-card col-sm-9"></div>
+          <div class="bal_leptetogomb col-sm-1">
+            <input type="button" value="⇠" />
+          </div>
+          <div class="jobb_leptetogomb col-sm-1">
+            <input type="button" value="⇢" />
+          </div>
         </div>
       </section>
       <div class="container-fluid row mt-2">

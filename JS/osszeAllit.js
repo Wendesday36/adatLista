@@ -29,10 +29,7 @@ export function osszeAllitDivbe(lista) {
     txt += `<h4 class="card-title">${lista[index].nev}</h4>`;
     txt += `<p class="card-text">${lista[index].kor}</p>`;
     txt += `<p class="card-text">${lista[index].fajta}</p>`;
- 
       txt += `<p class="card-text"><img src="${lista[index].kep}" alt=" #"></p>`;
-    
-
     txt += `<input type="button" id="${index}" class=" btn btn-sucess	nez" value="Nézd meg">`;
     txt += `</div>
         </div>`;
