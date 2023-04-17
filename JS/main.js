@@ -75,7 +75,7 @@ function AdatFelv() {
     };
     ADATLISTA.push(UJ);
     init()
+    
   });
-
   /*  const UJLISTAELEM = { nev: $("#neve"), kor: $("#kora"), fajta: $("#fajt") }; */
 }

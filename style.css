@@ -6,13 +6,18 @@ main {
   padding: 0;
   max-width: 1200px;
   background-color: rgb(189, 226, 245);
-  max-height: 1500px;
+  
 }
 header h1 {
   margin: 10px;
 }
 article{
   margin: auto;
+  
+}
+aside{
+  background-color: rgba(159, 206, 230, 0.863);
+  border-radius: 10px;
 }
 ul li {
   list-style: none;
@@ -62,10 +67,13 @@ aside input {
   margin: 5px;
 }
 section {
+  margin: 10px;
   padding: 10px;
   background-color: rgba(211, 247, 235, 0.815);
   border-radius: 10px;
+  z-index: 2;
 }
+
 .torolgomb {
   border: 0;
   background: none;
