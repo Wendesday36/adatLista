@@ -19,20 +19,19 @@ function AktualisElemMegj(NEZ) {
 }
 function MegTekint() {
   const NEZGOMB = $(".nez");
-  const MEGJ = $(".megjelenito");
-  balgomb.hide()
-  jobbgomb.hide()
-  bezar.hide()
+  balgomb.hide();
+  jobbgomb.hide();
+  bezar.hide();
   NEZGOMB.on("click", function (event) {
     const NEZ = $(event.target).attr("id");
     mostaniIndex = NEZ;
-    balgomb.show()
-    AktualisElemMegj(NEZ)
-    jobbgomb.show()
-    bezar.show()
-/*     Megjelen(MEGJ)
- */    
-    
+    AktualisElemMegj(NEZ);
+    balgomb.show();
+
+    jobbgomb.show();
+    bezar.show();
+    /*     Megjelen(MEGJ)
+     */
   });
 }
 /* function Megjelen(MEGJ){
@@ -70,4 +69,7 @@ jobbgomb.on("click", function () {
 const bezar = $(".bezar");
 bezar.on("click", function () {
   $(TARTALOM).hide();
+  jobbgomb.hide();
+  balgomb.hide();
+  bezar.hide();
 });

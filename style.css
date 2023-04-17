@@ -71,31 +71,11 @@ section {
 .card-text img {
   max-width: 80px;
 }
-.jobb_leptetogomb {
-  margin: 0;
-  float: right;
-  grid-area: j
-}
-.bal_leptetogomb {
-  margin: 0;
-  float: left;
-  grid-area: b;
-}
-.bezar{
-  grid-area: z;
-}
 .tartalom-card{
   margin: auto;
   padding: 0;
-  grid-area: t;
 }
-section{
-  position: relative;
-  
-}
-
-.megjelenito {
-  margin: 0;
-  
-  z-index: 1;
+.megjelenito{
+  display: flexbox;
+  flex-direction: row;
 }
