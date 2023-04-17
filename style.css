@@ -1,3 +1,6 @@
+*{
+  box-sizing:  content-box;
+}
 main {
   margin: auto;
   padding: 0;
@@ -7,6 +10,9 @@ main {
 }
 header h1 {
   margin: 10px;
+}
+article{
+  margin: auto;
 }
 ul li {
   list-style: none;
@@ -57,6 +63,8 @@ aside input {
 }
 section {
   padding: 10px;
+  background-color: rgba(211, 247, 235, 0.815);
+  border-radius: 10px;
 }
 .torolgomb {
   border: 0;
