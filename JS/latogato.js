@@ -17,8 +17,11 @@ function AktualisElemMegj(NEZ) {
   TARTALOM.html(osszeAllitDivbe(elem));
   console.log(NEZ);
 }
+const SECTION = $("section")
 function MegTekint() {
   const NEZGOMB = $(".nez");
+  
+  SECTION.hide()
   balgomb.hide();
   jobbgomb.hide();
   bezar.hide();
@@ -27,7 +30,7 @@ function MegTekint() {
     mostaniIndex = NEZ;
     AktualisElemMegj(NEZ);
     balgomb.show();
-
+    SECTION.show()
     jobbgomb.show();
     bezar.show();
     /*     Megjelen(MEGJ)
@@ -72,4 +75,5 @@ bezar.on("click", function () {
   jobbgomb.hide();
   balgomb.hide();
   bezar.hide();
+  SECTION.hide()
 });
