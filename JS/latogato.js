@@ -9,15 +9,19 @@ function init() {
   articleElem.html(osszeAllitDivbe(ADATLISTA));
   MegTekint();
 }
+
 const TARTALOM = $(".tartalom-card");
 function AktualisElemMegj(NEZ) {
   const elem = [];
   elem.push(ADATLISTA[NEZ]);
   console.log(elem);
   TARTALOM.html(osszeAllitDivbe(elem));
+  const MEGJLENITO = $(".megjelenito .card")
+  MEGJLENITO.removeClass("col-sm-3")
+  console.log(MEGJLENITO)
   console.log(NEZ);
 }
-const SECTION = $("section")
+const SECTION = $(".section")
 function MegTekint() {
   const NEZGOMB = $(".nez");
   
@@ -33,6 +37,7 @@ function MegTekint() {
     SECTION.show()
     jobbgomb.show();
     bezar.show();
+
     /*     Megjelen(MEGJ)
      */
   });

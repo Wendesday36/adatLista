@@ -33,9 +33,20 @@ ul li a {
   font-size: large;
   color: black;
 }
-section {
+.section {
   margin: auto;
   padding: 10px;
+  position: relative;
+}
+.megjelenito{
+  background-color: antiquewhite;
+  z-index: 1;
+  
+  position: absolute;
+  left: 100px;
+  right: 100px;
+  top: auto;
+  width: auto;
 }
 ul li a:visited {
   color: black;
@@ -69,9 +80,9 @@ aside input {
 section {
   margin: 10px;
   padding: 10px;
-  background-color: rgba(211, 247, 235, 0.815);
+  
   border-radius: 10px;
-  z-index: 2;
+  
 }
 
 .torolgomb {
@@ -91,7 +102,8 @@ section {
   margin: auto;
   padding: 0;
 }
-.megjelenito{
-  display: flexbox;
-  flex-direction: row;
+
+.osszes{
+  display: grid;
+  grid-template-columns: 50px auto 50px;
 }
