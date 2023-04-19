@@ -18,7 +18,7 @@ $(function () {
   TABLAZAT.append(tartalom);
 
   NEVINPUTELEM.on("input", function () {
-    let nevErtek = NEVINPUTELEM.val();
+    let nevErtek = NEVINPUTELEM.val().charAt(0).toUpperCase();
     let szurtlista = szures(ADATLISTA, "nev", nevErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
@@ -26,7 +26,7 @@ $(function () {
   });
 
   KORINPUTELEM.on("change", function () {
-    let korErtek = KORINPUTELEM.val();
+    let korErtek = KORINPUTELEM.val() ;
     let szurtlista = szuresKorra(ADATLISTA, "kor", korErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
@@ -34,7 +34,7 @@ $(function () {
   });
 
   FAJTAINPUTELEM.on("input", function () {
-    let fajtaErtek = FAJTAINPUTELEM.val();
+    let fajtaErtek = FAJTAINPUTELEM.val().charAt(0).toUpperCase();
     let szurtlista = szures(ADATLISTA, "fajta", fajtaErtek);
     console.log(szurtlista);
     let tartalom = osszeAllit(szurtlista);
