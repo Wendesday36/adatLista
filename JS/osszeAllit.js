@@ -1,7 +1,7 @@
 export function osszeAllit(lista) {
   let txt = "";
 
-  txt += `<table class="table table-stripped ">`;
+  txt += `<table id="admin" class="table table-stripped ">`;
   txt += `<tr class="table-dark"><th id ="nev">név ⇅</th>
       <th id ="kor">kor ⇅</th>
       <th id ="fajta">fajta ⇅</th>
@@ -10,9 +10,15 @@ export function osszeAllit(lista) {
   for (let index = 0; index < lista.length; index++) {
     txt += `<tr>`;
     for (const key in lista[index]) {
-      txt += `<td>${lista[index][key]} </td>`;
-/*       txt += `<td><img style = "width:70px " src="${lista[index].kep}" alt=" #"></td>`;
- */    }
+      
+      
+      if (key === "kep") {
+        txt += `<td><img style = "width:70px " src="${lista[index].kep}" alt=" #"></td>`
+      }
+      else{
+        txt += `<td>${lista[index][key]} </td>`;
+      }
+    }
 
     txt += `<td><button id="t${index}" class="torolgomb" type="button">ჯ</button> </td>`;
     `</tr>`;
