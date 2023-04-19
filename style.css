@@ -1,21 +1,19 @@
-*{
-  box-sizing:  content-box;
+* {
+  box-sizing: content-box;
 }
 main {
   margin: auto;
   padding: 0;
   max-width: 1200px;
   background-color: rgb(189, 226, 245);
-  
 }
 header h1 {
   margin: 10px;
 }
-article{
+article {
   margin: auto;
-  
 }
-aside{
+aside {
   background-color: rgba(159, 206, 230, 0.863);
   border-radius: 10px;
 }
@@ -38,12 +36,13 @@ ul li a {
   padding: 10px;
   position: relative;
 }
-.megjelenito{
-  background-color: antiquewhite;
+.megjelenito {
+  max-width: 500px;
+  background-color: rgb(192, 244, 194);
   z-index: 1;
-  
+  border-radius: 10px;
   position: absolute;
-  left: 100px;
+  left: 300px;
   right: 100px;
   top: auto;
   width: auto;
@@ -80,9 +79,8 @@ aside input {
 section {
   margin: 10px;
   padding: 10px;
-  
+
   border-radius: 10px;
-  
 }
 
 .torolgomb {
@@ -98,12 +96,37 @@ section {
 .card-text img {
   max-width: 80px;
 }
-.tartalom-card{
+.tartalom-card {
   margin: auto;
   padding: 0;
 }
-
-.osszes{
+.osszes {
   display: grid;
   grid-template-columns: 50px auto 50px;
+}
+@media screen and (max-width: 400px),(max-width:500px),(max-width:600px) {
+  main {
+    max-width: none;
+  }
+  * {
+    box-sizing: content-box;
+  }
+  .container {
+    max-width: 200px;
+  }
+  .megjelenito {
+    left: auto;
+    right: auto;
+    position: relative;
+  }
+  .osszes {
+    margin: auto;
+    max-width: 300px;
+    grid-template-columns: 20px auto 20px;
+  }
+  .tartalom-card{
+    margin: 5px;
+    max-width: 200px;
+    position: relative;
+  }
 }

@@ -18,6 +18,7 @@ function AktualisElemMegj(NEZ) {
   TARTALOM.html(osszeAllitDivbe(elem));
   const MEGJLENITO = $(".megjelenito .card")
   MEGJLENITO.removeClass("col-sm-3")
+  MEGJLENITO.removeClass("container row")
   console.log(MEGJLENITO)
   console.log(NEZ);
 }

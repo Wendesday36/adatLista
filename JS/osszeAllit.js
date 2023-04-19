@@ -1,7 +1,7 @@
 export function osszeAllit(lista) {
   let txt = "";
 
-  txt += `<table id="admin" class="table table-stripped ">`;
+  txt += `<table  class="table table-stripped ">`;
   txt += `<tr class="table-dark"><th id ="nev">név ⇅</th>
       <th id ="kor">kor ⇅</th>
       <th id ="fajta">fajta ⇅</th>
